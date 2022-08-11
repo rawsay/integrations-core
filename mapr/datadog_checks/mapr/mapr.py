@@ -89,8 +89,6 @@ class MaprCheck(AgentCheck):
                 SERVICE_CHECK, AgentCheck.CRITICAL, self.custom_tags + ['topic:{}'.format(self.topic_path)]
             )
             raise
-        else:
-            self.service_check(SERVICE_CHECK, AgentCheck.OK, self.custom_tags + ['topic:{}'.format(self.topic_path)])
 
         submitted_metrics_count = 0
 
@@ -123,6 +121,8 @@ class MaprCheck(AgentCheck):
 
         if submitted_metrics_count:
             self.gauge(METRICS_SUBMITTED_METRIC_NAME, submitted_metrics_count, self.custom_tags)
+
+        self.service_check(SERVICE_CHECK, AgentCheck.OK, self.custom_tags + ['topic:{}'.format(self.topic_path)])
 
     def _process_metric(self, msg):
         try:
