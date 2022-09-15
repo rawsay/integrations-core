@@ -18,5 +18,3 @@ matrix.aerospike-version.env-vars = "AEROSPIKE_VERSION"
 
 [envs.default.env-vars]
 AEROSPIKE_EXPORTER_VERSION = "1.5.0"
-
-[envs.bench]
