@@ -2,7 +2,11 @@
 
 ## Overview
 
-This check monitors [Vertica][1] through the Datadog Agent.
+This check monitors [Vertica][1] through the Datadog Agent. Monitor the performance and availability of your Vertica infrastructure with Datadog’s integration with Vertica. The integration allows you to:
+- View your cluster’s current K-safety value and compare it to the intended K-safety value.
+- Monitor your storage space to keep your database executing queries successfully.
+- Ensure your cluster is running a node count safely above 50 percent by monitoring the number of nodes that are currently down (in comparison to the number of nodes in your cluster).
+
 
 ## Setup
 
